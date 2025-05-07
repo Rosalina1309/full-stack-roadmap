@@ -1,4 +1,21 @@
 == Dictionary
-    * Stateless vs Stateful
-    * XML vs JSON
-    * SOAP vs REST
+    * *Stateless vs Stateful*
+[cols="3"]
+|===
+| Features |Stateless | Stateful
+ 
+| Definition
+| The server does not remember anything about the client between requests. Each request must include all necessary information
+| The server remembers the client's previous interactins, so later requests can rely on store session information
+
+| Easier to scale?
+| YES
+| NO
+
+| Example
+| REST API with token, Static Website(HTML/CSS), Google Search, HTTP
+| Login session with cookies, online shopping cart, chat app, banking websites
+ 
+|===
+    * *XML vs JSON*
+    * *SOAP vs REST*
