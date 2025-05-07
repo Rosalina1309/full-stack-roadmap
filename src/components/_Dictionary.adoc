@@ -1,0 +1,4 @@
+== Dictionary
+    * Stateless vs Stateful
+    * XML vs JSON
+    * SOAP vs REST
