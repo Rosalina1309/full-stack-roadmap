@@ -11,5 +11,6 @@
 . Database
 . Deployment
 . Testing
+. Dictionary
 . Extra
    

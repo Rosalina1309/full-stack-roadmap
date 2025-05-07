@@ -1,7 +1,7 @@
 == JavaScript
- * What is JavaScript and its history
-    * JavaScript Versions
-    * All about Variables
+    * *What is JavaScript and its history*
+    * *JavaScript Versions*
+    * *All about Variables*
         ** var
         ** let
         ** const
@@ -13,7 +13,7 @@
             *** Function
             *** Global
 
-    * Data Types
+    * *Data Types*
         ** Primitive Types
             *** string
             *** number
@@ -27,99 +27,99 @@
             *** Object Prototype
             *** Prototypal Inheritance
             *** typeof operator+
-        ** Type Casting
-            *** Type Conversion vs Coercion
-            *** Implicit Type Casting
-            *** Explicit Type Casting
-        ** Data Structure
-            *** Keyed Collections
-                **** Map
-                **** Weak Map
-                **** Set
-                **** Weak Set
-            *** Structured Data
-                **** JSON
-                **** XML
-            *** Indexed Collections
-                **** Typed Arrays
-                **** Arrays
-        ** Equality Comparisons
-            *** Value Comparison Operators
-                **** ==
-                **** ===
-                **** Object.is
-            *** Equality Algorithms
-                **** isLooselyEqual
-                **** isStrictlyEqual
-                **** SameValueZero
-                **** SameValue
-        ** Loops and Iterations
-            *** for
-            *** break/continue
-            *** do...while
-            *** for...of loop
-            *** for...in loop
-            *** while
-        ** Control Flow
-            *** Conditional Statements
-                **** if...else
-                **** switch...case
-            *** Exceptional Handling
-                **** throw statement
-                **** try/catch/finally
-                **** Error Objects
-        ** Expressions & Operators
-            *** Conditional Operators
-            *** Arithmetic Operators
-            *** Bitwise Operators
-            *** Logical Operators
-            *** BigInt Operators
-            *** String Operators
-        ** Functions
-            *** Function Parameters
-                **** Default Params
-                **** Rest
-            *** Arrow Functions
-            *** Built-in Functions
-            *** IIFEs
-            *** Arguments object
-            *** Scopr & Function Stack
-                **** Recursion
-                **** Lexical Scoping
-                **** Closures
-        ** DOM APIs
-        ** Strict Mode
-        ** Using (this) keyword
-            *** In a method
-            *** In a function
-            *** Using it alone
-            *** In event handlers
-            *** In arrow functions
-            *** Function borrowing
-            *** Explicit binding
-                **** call
-                **** apply
-                **** bind
-        ** Asynchronous JS
-            *** Event Loop
-            *** setTimeout
-            *** SetInterval
-            *** Callbacks
-                **** Callback Hell
-            *** Promise
-                **** async/await
-        ** Working with APIs
-            *** XMLHTTPRequest
-            *** Fetch
-        ** Classes
-        ** Module in JS
-            *** CommonJS
-            *** ESM
-        ** Memory Management
-            *** Memmory Lifecycle
-            *** Garbage Collection
-        ** Using Browser DevTools
-            *** Debugging Issues
-            *** Debugging Memory Leaks
-            *** Debugging Performance
-            
+    * *Type Casting*
+        ** Type Conversion vs Coercion
+        ** Implicit Type Casting
+        ** Explicit Type Casting
+    * *Data Structure*
+        ** Keyed Collections
+            *** Map
+            *** Weak Map
+            *** Set
+            *** Weak Set
+        ** Structured Data
+            **** JSON
+            **** XML
+        ** Indexed Collections
+            *** Typed Arrays
+            *** Arrays
+    * *Equality Comparisons*
+        ** Value Comparison Operators
+            *** ==
+            *** ===
+            *** Object.is
+        ** Equality Algorithms
+            *** isLooselyEqual
+            *** isStrictlyEqual
+            *** SameValueZero
+            *** SameValue
+    * *Loops and Iterations*
+        ** for
+        ** break/continue
+        ** do...while
+        ** for...of loop
+        ** for...in loop
+        ** while
+    * *Control Flow*
+        ** Conditional Statements
+            *** if...else
+            *** switch...case
+        ** Exceptional Handling
+            *** throw statement
+            *** try/catch/finally
+            *** Error Objects
+    * *Expressions & Operators*
+        ** Conditional Operators
+        ** Arithmetic Operators
+        ** Bitwise Operators
+        ** Logical Operators
+        ** BigInt Operators
+        ** String Operators
+    * *Functions*
+        ** Function Parameters
+            *** Default Params
+            *** Rest
+        ** Arrow Functions
+        ** Built-in Functions
+        ** IIFEs
+        ** Arguments object
+        ** Scopr & Function Stack
+            *** Recursion
+            *** Lexical Scoping
+            *** Closures
+    * *DOM APIs*
+    * *Strict Mode*
+    * *Using (this) keyword*
+        ** In a method
+        ** In a function
+        ** Using it alone
+        ** In event handlers
+        ** In arrow functions
+        ** Function borrowing
+        ** Explicit binding
+            *** call
+            *** apply
+            *** bind
+    * *Asynchronous JS*
+        ** Event Loop
+        ** setTimeout
+        ** SetInterval
+        ** Callbacks
+            *** Callback Hell
+        ** Promise
+            *** async/await
+    * *Working with APIs*
+        ** XMLHTTPRequest
+        ** Fetch
+    * *Classes*
+    * *Module in JS*
+        ** CommonJS
+        ** ESM
+    * *Memory Management*
+        ** Memmory Lifecycle
+        ** Garbage Collection
+    * *Using Browser DevTools*
+        ** Debugging Issues
+        ** Debugging Memory Leaks
+        ** Debugging Performance
+        

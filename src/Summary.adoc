@@ -26,4 +26,6 @@ include::components/_Deployment.adoc[]
 
 include::components/_Testing.adoc[]
 
+include::components/_Dictionary.adoc[]
+
 include::components/_Extra.adoc[]
