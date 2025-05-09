@@ -77,3 +77,64 @@
 |===
 
     * *SOAP vs REST*
+
+[cols="1,1,1,2", options="header"]
+|===
+| Features |SOAP | REST | Why it matters
+
+| Protocol style
+| Strict, well-defined protocol
+| Architectural style on top of HTTP
+| Dictates how tightly clients and servers are coupled
+
+| Transporz options
+| HTTP, SMTP, JMS, more
+| Primarly HTTP
+| Affects firewall friendlyness and infrastructure simplicity
+
+| Message format
+| Always XML (soap:Envelope)
+| Any (JSON, XML, HTML, etc.)
+| Impacts payload size and ease of parsing
+
+| Contract / interface description
+| Mandatory WSDL (strongly typed)
+| Optional, typically OpenAPI/Swagger
+| Controls discoverability and compile-time safety
+
+| Verb mapping
+| Operation names in message body
+| Direct use of HTTP verbs (GET, POST...)
+| Influences clarity. caching, and semantics
+
+| Caching capability
+| None built-in
+| GET responses cachable by default
+| Saves bandwidth, boosts speed
+
+| State handling
+| Can be stateless but often uses sessions
+| Stateless by design
+| Easier horizontal scaling
+
+| Security standards
+| WS-Security, WS-*, SAML, etc.
+| HTTPS/TLS plus OAuth 2.0, JWT
+| Heavy enterprise stack and lightweight web standards
+
+| Error reporting 
+| SOAP Fault envelope
+| HTTP status codes
+| Familarity and debugging convenience
+
+| Payload overhead
+| Heavy XML envelope
+| Lean-often JSON
+| Performance and mobile-friendliness
+
+| Typical sweet spot
+| Enterprise B"B, ACID transactions
+| Web/mobile APIs, microservices
+| Choose the one that fits your project
+
+|===

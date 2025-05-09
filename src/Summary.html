@@ -1182,6 +1182,90 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Features</th>
+<th class="tableblock halign-left valign-top">SOAP</th>
+<th class="tableblock halign-left valign-top">REST</th>
+<th class="tableblock halign-left valign-top">Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Protocol style</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strict, well-defined protocol</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Architectural style on top of HTTP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dictates how tightly clients and servers are coupled</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transporz options</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP, SMTP, JMS, more</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Primarly HTTP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Affects firewall friendlyness and infrastructure simplicity</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Message format</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Always XML (soap:Envelope)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any (JSON, XML, HTML, etc.)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Impacts payload size and ease of parsing</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contract / interface description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory WSDL (strongly typed)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional, typically OpenAPI/Swagger</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Controls discoverability and compile-time safety</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verb mapping</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Operation names in message body</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Direct use of HTTP verbs (GET, POST&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Influences clarity. caching, and semantics</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Caching capability</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None built-in</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GET responses cachable by default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Saves bandwidth, boosts speed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">State handling</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Can be stateless but often uses sessions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stateless by design</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Easier horizontal scaling</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Security standards</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WS-Security, WS-*, SAML, etc.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTPS/TLS plus OAuth 2.0, JWT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Heavy enterprise stack and lightweight web standards</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error reporting</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SOAP Fault envelope</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP status codes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Familarity and debugging convenience</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Payload overhead</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Heavy XML envelope</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lean-often JSON</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Performance and mobile-friendliness</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Typical sweet spot</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise B"B, ACID transactions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Web/mobile APIs, microservices</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Choose the one that fits your project</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect1">
