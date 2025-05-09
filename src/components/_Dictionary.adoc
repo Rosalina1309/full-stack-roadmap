@@ -17,5 +17,63 @@
 | Login session with cookies, online shopping cart, chat app, banking websites
  
 |===
+
+
     * *XML vs JSON*
+[cols="1,1,1,2", options="header"]
+|===
+| Features | XML | JSON | Why it matters
+
+| Size on the wire
+| Bigger - lots of opening/closing tags
+| Smaller - no end tags
+| Small mesages travel fast and cost less bandwidth
+
+| Parsing speed
+| Slower - needs an XML parser
+| Faster - one-liner like `JSON.parse()`
+| Affects API response time and battery life
+
+| Comments allowed?
+| Yes (`<book title="...">`)
+| No
+| Needed for rich documents
+
+| Attributes for extra info
+| Yes (`<book title="...">`)
+| No
+| Needed for rich documents
+
+| Mixed test + markup (e-book style)
+| Yes
+| No
+| Needed for rich documents
+
+| Namespaces (avoid name clashes)
+| Built-in(`xmlns`)
+| None
+| Lets big specs mix vocabularies safely
+
+| Schema / strict rules
+| Very powerful (XSD, DTD)
+| Simpler (JSON Schema)
+| Enforces exact data shape in long-lived systems
+
+| Typical use today
+| Document formats. older enterprise integrations
+| Web/mobile APIs, logs, configs
+| Pick the tool that fits the project
+
+| Biggest pro
+| Rich features for complex documents
+| Lean and fat for everyday data
+|
+
+| Biggest con
+| Verbose and slower
+| No comments/attributes, less document-friendly
+|
+
+|===
+
     * *SOAP vs REST*

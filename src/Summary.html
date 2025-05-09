@@ -1095,6 +1095,88 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li>
 <p><strong>XML vs JSON</strong></p>
 </li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Features</th>
+<th class="tableblock halign-left valign-top">XML</th>
+<th class="tableblock halign-left valign-top">JSON</th>
+<th class="tableblock halign-left valign-top">Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Size on the wire</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bigger - lots of opening/closing tags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Smaller - no end tags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Small mesages travel fast and cost less bandwidth</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parsing speed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Slower - needs an XML parser</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Faster - one-liner like <code>JSON.parse()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Affects API response time and battery life</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comments allowed?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes (<code>&lt;book title="&#8230;&#8203;"&gt;</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Needed for rich documents</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attributes for extra info</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes (<code>&lt;book title="&#8230;&#8203;"&gt;</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Needed for rich documents</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mixed test + markup (e-book style)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Needed for rich documents</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Namespaces (avoid name clashes)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Built-in(<code>xmlns</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lets big specs mix vocabularies safely</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schema / strict rules</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Very powerful (XSD, DTD)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simpler (JSON Schema)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enforces exact data shape in long-lived systems</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Typical use today</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Document formats. older enterprise integrations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Web/mobile APIs, logs, configs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pick the tool that fits the project</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Biggest pro</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rich features for complex documents</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lean and fat for everyday data</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Biggest con</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verbose and slower</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No comments/attributes, less document-friendly</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
 <li>
 <p><strong>SOAP vs REST</strong></p>
 </li>
