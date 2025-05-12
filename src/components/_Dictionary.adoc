@@ -24,6 +24,11 @@
 |===
 | Features | XML | JSON | Why it matters
 
+| Stands for
+| Extensible Markup Language
+| JavaScript Object Notation
+|
+
 | Size on the wire
 | Bigger - lots of opening/closing tags
 | Smaller - no end tags
@@ -81,6 +86,11 @@
 [cols="1,1,1,2", options="header"]
 |===
 | Features |SOAP | REST | Why it matters
+
+| Stands for
+| Simple Object Access Protocol
+| Representational State Transfer
+|
 
 | Protocol style
 | Strict, well-defined protocol
