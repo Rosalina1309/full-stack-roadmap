@@ -507,44 +507,203 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul>
 <li>
 <p><strong>What is JavaScript and its history</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>JavaScript is a scripting or programming language that enables you to create dynamicallin updating content, control multimedia, animate images, and more.</p>
+</li>
+<li>
+<p>History:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1995 - Eich wrote JS at Netscape</p>
+</li>
+<li>
+<p>1997 - ECMAScript 1</p>
+</li>
+<li>
+<p>1999 - ECMAScript 3 (baseline)</p>
+</li>
+<li>
+<p>2005 - AJAX coined: jQuery era</p>
+</li>
+<li>
+<p>2008 - Google V8 Engine</p>
+</li>
+<li>
+<p>2008 - Node.js &amp; npm</p>
+</li>
+<li>
+<p>2015 ECMAScript 6 (ES2015) - big language revamp</p>
+</li>
+<li>
+<p>2019 OpenJS Foundation formed</p>
+</li>
+<li>
+<p>2024 ECMAScript 2024 ( 15th Version)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p><strong>JavaScript Versions</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>ES1 - ECMAScript 1 (1997) - First version</p>
+</li>
+<li>
+<p>ES2 - ECMAScript 2 (1998) - Editorial changes</p>
+</li>
+<li>
+<p>ES3 - ECMAScript 3 (1999) - Addede regular expressions, try/catch, switch, do-while</p>
+</li>
+<li>
+<p>ES4 - ECMAScript 4 ()     - Never released</p>
+</li>
+<li>
+<p>ES5 - ECMAScript 5 (2009) - Added "strict mode", JSON support, String.trim(), Array.isArray(), Array iteration methods, allow trailing commas for object literals</p>
+</li>
+<li>
+<p>ES6 - ECMAScript 2015 - Added let &amp; const, default paramter values, Array.find(), Array.findIndex()</p>
+</li>
+<li>
+<p>ECMAScript 2016 - Added exponential operator, Array.includes()</p>
+</li>
+<li>
+<p>ECMAScript 2017 - Added string padding, Object.entries(), Object.values(), async functions, shared memory, allow trailing commas for function parameters</p>
+</li>
+<li>
+<p>ECMAScript 2018 - Added rest/ spread properties, asynchronous iteration, Promise.finally(), additions to RegExp</p>
+</li>
+<li>
+<p>ECMAScript 2019 - String.trimStart(), String.trimEnd(), Array.flat(), Object.fromEntried, optional catch binding</p>
+</li>
+<li>
+<p>ECMAScript 2020 - Nulllish Coalescing Operator (??)</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p><strong>All about Variables</strong></p>
 <div class="ulist">
 <ul>
 <li>
-<p>var</p>
+<p>var:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>declares function-scopred or globally-scoped variables, optionally initializing each to a value</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p>let</p>
+<p>let:(-declaration)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>declared re-assignable, block-scoped local variables, optionally initialiting each to a value</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p>const</p>
+<p>const:(-declaration)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>declares block-scopede local variables. The value of a constant canÄt be changed through reassignment operator, but if a contant is an object, its properties can be added, updated or removed</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p>Variable Declarations</p>
+<p>Variable Declarations :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Creating a variable in JS is called "declaring" a variable.</p>
+</li>
+<li>
+<p>We declare a JS variable with the var, let or const keyword (<code>let carName;</code>)</p>
+</li>
+<li>
+<p>After the declaration the variable doesn&#8217;t have any value and has to be assigned using the equal sign (<code>let carName ="VW";</code>)</p>
+</li>
+<li>
+<p>We can assign the value right at the time we declare it (<code>let carName ="VW</code>)</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>Hoisting</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In JS, a variable can be declared after it has been used. In other word, a variable can be used before it has been declared</p>
 </li>
 <li>
-<p>Variable Naming Rules</p>
+<p>Hoisting js JS&#8217;s default behavior  of moving all declarations to the top of the current scope (to the top of the current script or the surrent fucntion)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Variable Naming Rules:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>camelCase (variables &amp; functions)</p>
+</li>
+<li>
+<p>all names start witha  letter</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>Variable Scopes</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Block</p>
+<p>Block (with let &amp; const)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Variables declared inside a {} block cannot be used outside of the block</p>
+</li>
+<li>
+<p>Variables declared with var can&#8217;t have block scope (automatically global)</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>Function</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Variables declared within a JS function, are LOCAL to the function and can&#8217;t be called outside</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>Global</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A variable declared outside a function, becomes GLOBAl (var is always global)</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -1114,6 +1273,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stands for</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extensible Markup Language</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JavaScript Object Notation</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Size on the wire</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Bigger - lots of opening/closing tags</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Smaller - no end tags</p></td>
@@ -1198,6 +1363,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 </thead>
 <tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stands for</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simple Object Access Protocol</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Representational State Transfer</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Protocol style</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Strict, well-defined protocol</p></td>

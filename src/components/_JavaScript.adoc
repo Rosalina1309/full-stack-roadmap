@@ -1,17 +1,62 @@
 == JavaScript
     * *What is JavaScript and its history*
+        ** JavaScript is a scripting or programming language that enables you to create dynamicallin updating content, control multimedia, animate images, and more.
+        ** History:
+            *** 1995 - Eich wrote JS at Netscape
+            *** 1997 - ECMAScript 1
+            *** 1999 - ECMAScript 3 (baseline)
+            *** 2005 - AJAX coined: jQuery era
+            *** 2008 - Google V8 Engine
+            *** 2008 - Node.js & npm
+            *** 2015 ECMAScript 6 (ES2015) - big language revamp
+            *** 2019 OpenJS Foundation formed
+            *** 2024 ECMAScript 2024 ( 15th Version)
+
     * *JavaScript Versions*
+        ** ES1 - ECMAScript 1 (1997) - First version
+        ** ES2 - ECMAScript 2 (1998) - Editorial changes
+        ** ES3 - ECMAScript 3 (1999) - Addede regular expressions, try/catch, switch, do-while
+        ** ES4 - ECMAScript 4 ()     - Never released
+        ** ES5 - ECMAScript 5 (2009) - Added "strict mode", JSON support, String.trim(), Array.isArray(), Array iteration methods, allow trailing commas for object literals
+        ** ES6 - ECMAScript 2015 - Added let & const, default paramter values, Array.find(), Array.findIndex()
+        **       ECMAScript 2016 - Added exponential operator, Array.includes()
+        **       ECMAScript 2017 - Added string padding, Object.entries(), Object.values(), async functions, shared memory, allow trailing commas for function parameters
+        **       ECMAScript 2018 - Added rest/ spread properties, asynchronous iteration, Promise.finally(), additions to RegExp
+        **       ECMAScript 2019 - String.trimStart(), String.trimEnd(), Array.flat(), Object.fromEntried, optional catch binding
+        **       ECMAScript 2020 - Nulllish Coalescing Operator (??)
+
     * *All about Variables*
-        ** var
-        ** let
-        ** const
-        ** Variable Declarations
+        ** var:
+            *** declares function-scopred or globally-scoped variables, optionally initializing each to a value
+
+        ** let:(-declaration) 
+            *** declared re-assignable, block-scoped local variables, optionally initialiting each to a value
+
+        ** const:(-declaration) 
+            *** declares block-scopede local variables. The value of a constant canÄt be changed through reassignment operator, but if a contant is an object, its properties can be added, updated or removed
+
+        ** Variable Declarations : 
+            *** Creating a variable in JS is called "declaring" a variable. 
+            *** We declare a JS variable with the var, let or const keyword (`let carName;`)
+            *** After the declaration the variable doesn't have any value and has to be assigned using the equal sign (`let carName ="VW";`)
+            *** We can assign the value right at the time we declare it (`let carName ="VW`)
+
         ** Hoisting
-        ** Variable Naming Rules
+            *** In JS, a variable can be declared after it has been used. In other word, a variable can be used before it has been declared
+            *** Hoisting js JS's default behavior  of moving all declarations to the top of the current scope (to the top of the current script or the surrent fucntion)
+
+        ** Variable Naming Rules:
+            *** camelCase (variables & functions)
+            *** all names start witha  letter
+
         ** Variable Scopes
-            *** Block
+            *** Block (with let & const)
+                **** Variables declared inside a {} block cannot be used outside of the block
+                **** Variables declared with var can't have block scope (automatically global)
             *** Function
+                **** Variables declared within a JS function, are LOCAL to the function and can't be called outside
             *** Global
+                **** A variable declared outside a function, becomes GLOBAl (var is always global)
 
     * *Data Types*
         ** Primitive Types
