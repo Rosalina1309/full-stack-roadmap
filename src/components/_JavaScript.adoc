@@ -37,9 +37,9 @@
 
         ** Variable Declarations : 
             *** Creating a variable in JS is called "declaring" a variable. 
-            *** We declare a JS variable with the var, let or const keyword (`let carName;`)
+            *** Y declare a JS variable with the var, let or const keyword (`let carName;`)
             *** After the declaration the variable doesn't have any value and has to be assigned using the equal sign (`let carName ="VW";`)
-            *** We can assign the value right at the time we declare it (`let carName ="VW`)
+            *** Y can assign the value right at the time Y declare it (`let carName ="VW`)
 
         ** Hoisting
             *** In JS, a variable can be declared after it has been used. In other word, a variable can be used before it has been declared
@@ -60,18 +60,129 @@
 
     * *Data Types*
         ** Primitive Types
-            *** string
+            *** string:
+                **** A string (or a text string) is a series of characters like "John Doe"
+                **** Strings are written with quotes. Yo can use single or double quotes
+
             *** number
+                **** All JavaScript numbers are stored as decimal numbers (floating point)
+                **** Can be written with or without decimals
+
             *** undefined
-            *** bigint
+                **** In JS, a variable withour a value, has the value undefined. The type is also undefined
+
+            *** BigInt
+                **** All JavaScript numbers are stored in a 64-bit floating-point format
+                **** JS BigInt is new datatype that can be used to store integer values tha are too big to be represented by a normal JS number
+
             *** null
+                **** The null value represents the intentional absemce pf any object value. It is treadted as falsy for boolean operations
+
             *** boolean
+                **** Booleans can only have two values true or false
+
             *** Symbol
+                **** Symbol is a built-in object whose constrcutor returns a symbol primitive - also calles a Symbol value or just a Symbol - that's guaranteed to be unique. 
+
         ** Object
-            *** Built-in Object
-            *** Object Prototype
-            *** Prototypal Inheritance
-            *** typeof operator+
+            *** JS  objects are written with curly braces. 
+            *** Object properties are written as name:value paors, seperated by commas.
+
+                **** Built-in Object
+                    ***** JS consists of a bunch of Built-In Objects, the following list explores most of them. Although these built-ins have the appearance of being actual types or classes like in any other OOP, in JS these are only functions that can be used as constructors to create objects of a particular sub-type
+[cols="3"]
+|===
+| Category | Core objects you'll meet first | Typical use
+
+| Fundamentals
+| Object, Function, Boolean, Symbol, Error classes
+| Everything else is built on top of these
+
+| Numbers & time
+| Number, BigInt, Math, Data
+| Math helpers, huge integers, timestamp
+
+| Text
+| String, RegExp
+| Unicode strings, pattern matching
+
+| Indexed collections
+| Array, typed arrays (Uint8Array,Float32Array...), ArrayBuffer, SharedArrayBuffer, DataView
+| Lists, raw binary data, shared memory
+
+| Keyed collections
+| Map, SetakMapakSet
+| Hash tables and mathematical sets
+
+| Structured data/ concurrency
+| JSON, Atomics
+| Serialize to JSON, thread-safe ops on shared memory
+
+| Control & meta-programming
+| Promise, generator/async functions, Refelct, Proxy
+| Asynchronous code, custom property traps
+
+| Internationalization
+| Intl (e.g. Intl.DateTimeFormat, Intl.NumberFormat)
+| Locale-aware dates, numbers, collation
+
+| Global value properties
+| Infinity, NaN, undefined, globalThis
+| Language-wide constants
+
+|===
+
+                **** Object Prototype
+                    ***** Prototypes are the mechanism by which JS objects inherit features from one another. All JS objects inherit properties & methods froma prototype ( Date objects inherit from Dat.prototype and so on with other objects)
+                    ***** The Object.prototype is on the top of the prototype chain. And the null-object is on the highest position of this hierarchy.
+                    ***** Cannot add a new property to a existing object constructor. To add new property to a constructor, you must add it to the constructor function 
+
+                **** Prototypal Inheritance
+                    ***** In JS, objects inherit directly from other objects. Every ordinary object carries a hidden [[Prototype]] slot that points to another object (or null). When you need a property, the engine walks that prototype chain until it finds the key or runs out of links
+
+[cols="3"]
+|===
+| Pattern | How it sets [[Prototype]] | Code snippet
+
+| Object literal
+| Links to Object.prototype
+| const obj = {}
+
+| Constructor + new
+| Links to Func.prototype
+| js function Person(){}; +
+const p = new Person();
+
+| ES class (sugar)
+| Same as constructor
+| class Car{} +
+new Car()
+
+| Object.create(proto)
+| Links to proto exactly
+| const dict = Object.create(null);
+
+| __proto__ setter (legacy)
+| Mutates [[Prototype]] at runtime
+| child.__proto__ = parent;
+
+| Object.setPropertyeOf(obj, proto)
+| Official mutable API
+| Object.setPrototypeOf(dog, animal);
+
+
+|===
+
+                **** typeof operator
+                    ***** You can use the JS `typeof` operator to find the type of a JS variable
+                    ***** The `typeof` operator returns the type of a variable or an expression
+
+        ** Array
+            *** JavaScript arrays are written with square brackets. 
+            *** Array items are seperated by commas
+            *** Using an array literal is the easiest way to create a JS Array ( const arr = [item1, item2...])
+            *** Access array element by referring to the index number
+
     * *Type Casting*
         ** Type Conversion vs Coercion
         ** Implicit Type Casting
@@ -79,9 +190,9 @@
     * *Data Structure*
         ** Keyed Collections
             *** Map
-            *** Weak Map
+            *** Yak Map
             *** Set
-            *** Weak Set
+            *** Yak Set
         ** Structured Data
             **** JSON
             **** XML

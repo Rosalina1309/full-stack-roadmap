@@ -631,13 +631,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Creating a variable in JS is called "declaring" a variable.</p>
 </li>
 <li>
-<p>We declare a JS variable with the var, let or const keyword (<code>let carName;</code>)</p>
+<p>Y declare a JS variable with the var, let or const keyword (<code>let carName;</code>)</p>
 </li>
 <li>
 <p>After the declaration the variable doesn&#8217;t have any value and has to be assigned using the equal sign (<code>let carName ="VW";</code>)</p>
 </li>
 <li>
-<p>We can assign the value right at the time we declare it (<code>let carName ="VW</code>)</p>
+<p>Y can assign the value right at the time Y declare it (<code>let carName ="VW</code>)</p>
 </li>
 </ul>
 </div>
@@ -720,25 +720,83 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>string</p>
+<p>string:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A string (or a text string) is a series of characters like "John Doe"</p>
+</li>
+<li>
+<p>Strings are written with quotes. Yo can use single or double quotes</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>number</p>
+<div class="ulist">
+<ul>
+<li>
+<p>All JavaScript numbers are stored as decimal numbers (floating point)</p>
+</li>
+<li>
+<p>Can be written with or without decimals</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>undefined</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In JS, a variable withour a value, has the value undefined. The type is also undefined</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p>bigint</p>
+<p>BigInt</p>
+<div class="ulist">
+<ul>
+<li>
+<p>All JavaScript numbers are stored in a 64-bit floating-point format</p>
+</li>
+<li>
+<p>JS BigInt is new datatype that can be used to store integer values tha are too big to be represented by a normal JS number</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>null</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The null value represents the intentional absemce pf any object value. It is treadted as falsy for boolean operations</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>boolean</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Booleans can only have two values true or false</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>Symbol</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Symbol is a built-in object whose constrcutor returns a symbol primitive - also calles a Symbol value or just a Symbol - that&#8217;s guaranteed to be unique.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -748,27 +806,211 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>Built-in Object</p>
+<p>JS  objects are written with curly braces.</p>
 </li>
 <li>
+<p>Object properties are written as name:value paors, seperated by commas.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Built-in Object</p>
+<div class="ulist">
+<ul>
+<li>
+<p>JS consists of a bunch of Built-In Objects, the following list explores most of them. Although these built-ins have the appearance of being actual types or classes like in any other OOP, in JS these are only functions that can be used as constructors to create objects of a particular sub-type</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Category</th>
+<th class="tableblock halign-left valign-top">Core objects you&#8217;ll meet first</th>
+<th class="tableblock halign-left valign-top">Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fundamentals</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Object, Function, Boolean, Symbol, Error classes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Everything else is built on top of these</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Numbers &amp; time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number, BigInt, Math, Data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Math helpers, huge integers, timestamp</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String, RegExp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unicode strings, pattern matching</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexed collections</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Array, typed arrays (Uint8Array,Float32Array&#8230;&#8203;), ArrayBuffer, SharedArrayBuffer, DataView</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lists, raw binary data, shared memory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keyed collections</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Map, SetakMapakSet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hash tables and mathematical sets</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Structured data/ concurrency</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JSON, Atomics</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Serialize to JSON, thread-safe ops on shared memory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Control &amp; meta-programming</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Promise, generator/async functions, Refelct, Proxy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Asynchronous code, custom property traps</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internationalization</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intl (e.g. Intl.DateTimeFormat, Intl.NumberFormat)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Locale-aware dates, numbers, collation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Global value properties</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Infinity, NaN, undefined, globalThis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Language-wide constants</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
 <p>Object Prototype</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Prototypes are the mechanism by which JS objects inherit features from one another. All JS objects inherit properties &amp; methods froma prototype ( Date objects inherit from Dat.prototype and so on with other objects)</p>
+</li>
+<li>
+<p>The Object.prototype is on the top of the prototype chain. And the null-object is on the highest position of this hierarchy.</p>
+</li>
+<li>
+<p>Cannot add a new property to a existing object constructor. To add new property to a constructor, you must add it to the constructor function</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>Prototypal Inheritance</p>
-</li>
-<li>
-<p>typeof operator+</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Type Casting</strong></p>
 <div class="ulist">
 <ul>
+<li>
+<p>In JS, objects inherit directly from other objects. Every ordinary object carries a hidden <a id="Prototype"></a> slot that points to another object (or null). When you need a property, the engine walks that prototype chain until it finds the key or runs out of links</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Pattern</th>
+<th class="tableblock halign-left valign-top">How it sets <a id="Prototype"></a></th>
+<th class="tableblock halign-left valign-top">Code snippet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Object literal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Links to Object.prototype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">const obj = {}</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Constructor + new</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Links to Func.prototype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">js function Person(){};<br>
+const p = new Person();</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ES class (sugar)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Same as constructor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class Car{}<br>
+new Car()</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Object.create(proto)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Links to proto exactly</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">const dict = Object.create(null);</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>proto</em> setter (legacy)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mutates <a id="Prototype"></a> at runtime</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">child.<em>proto</em> = parent;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Object.setPropertyeOf(obj, proto)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Official mutable API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Object.setPrototypeOf(dog, animal);</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>typeof operator</p>
+<div class="ulist">
+<ul>
+<li>
+<p>You can use the JS <code>typeof</code> operator to find the type of a JS variable</p>
+</li>
+<li>
+<p>The <code>typeof</code> operator returns the type of a variable or an expression</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Array</p>
+<div class="ulist">
+<ul>
+<li>
+<p>JavaScript arrays are written with square brackets.</p>
+</li>
+<li>
+<p>Array items are seperated by commas</p>
+</li>
+<li>
+<p>Using an array literal is the easiest way to create a JS Array ( const arr = [item1, item2&#8230;&#8203;])</p>
+</li>
+<li>
+<p>Access array element by referring to the index number</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Type Casting</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p>Type Conversion vs Coercion</p>
 </li>
@@ -777,14 +1019,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li>
 <p>Explicit Type Casting</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Data Structure</strong></p>
 </li>
 </ul>
 </div>
 </li>
-<li>
-<p><strong>Data Structure</strong></p>
-<div class="ulist">
-<ul>
 <li>
 <p>Keyed Collections</p>
 <div class="ulist">
@@ -793,30 +1035,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Map</p>
 </li>
 <li>
-<p>Weak Map</p>
+<p>Yak Map</p>
 </li>
 <li>
 <p>Set</p>
 </li>
 <li>
-<p>Weak Set</p>
+<p>Yak Set</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
 <p>Structured Data</p>
-<div class="ulist">
-<ul>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p>JSON</p>
 </li>
 <li>
 <p>XML</p>
-</li>
-</ul>
-</div>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p>Indexed Collections</p>
 <div class="ulist">
@@ -826,17 +1071,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li>
 <p>Arrays</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Equality Comparisons</strong></p>
 <div class="ulist">
 <ul>
+<li>
+<p><strong>Equality Comparisons</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p>Value Comparison Operators</p>
 <div class="ulist">
@@ -868,17 +1113,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li>
 <p>SameValue</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Loops and Iterations</strong></p>
 <div class="ulist">
 <ul>
+<li>
+<p><strong>Loops and Iterations</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p>for</p>
 </li>
@@ -896,14 +1141,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li>
 <p>while</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Control Flow</strong></p>
 </li>
 </ul>
 </div>
 </li>
-<li>
-<p><strong>Control Flow</strong></p>
-<div class="ulist">
-<ul>
 <li>
 <p>Conditional Statements</p>
 <div class="ulist">
@@ -929,17 +1174,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li>
 <p>Error Objects</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Expressions &amp; Operators</strong></p>
 <div class="ulist">
 <ul>
+<li>
+<p><strong>Expressions &amp; Operators</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p>Conditional Operators</p>
 </li>
@@ -957,14 +1202,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li>
 <p>String Operators</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Functions</strong></p>
 </li>
 </ul>
 </div>
 </li>
-<li>
-<p><strong>Functions</strong></p>
-<div class="ulist">
-<ul>
 <li>
 <p>Function Parameters</p>
 <div class="ulist">
@@ -1002,13 +1247,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li>
 <p>Closures</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p><strong>DOM APIs</strong></p>
 </li>
@@ -1017,8 +1257,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li>
 <p><strong>Using (this) keyword</strong></p>
-<div class="ulist">
-<ul>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p>In a method</p>
 </li>
@@ -1049,17 +1294,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li>
 <p>bind</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Asynchronous JS</strong></p>
 <div class="ulist">
 <ul>
+<li>
+<p><strong>Asynchronous JS</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p>Event Loop</p>
 </li>
@@ -1085,59 +1330,59 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul>
 <li>
 <p>async/await</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Working with APIs</strong></p>
 <div class="ulist">
 <ul>
+<li>
+<p><strong>Working with APIs</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p>XMLHTTPRequest</p>
 </li>
 <li>
 <p>Fetch</p>
-</li>
-</ul>
-</div>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p><strong>Classes</strong></p>
 </li>
 <li>
 <p><strong>Module in JS</strong></p>
-<div class="ulist">
-<ul>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p>CommonJS</p>
 </li>
 <li>
 <p>ESM</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Memory Management</strong></p>
 </li>
 </ul>
 </div>
 </li>
-<li>
-<p><strong>Memory Management</strong></p>
-<div class="ulist">
-<ul>
 <li>
 <p>Memmory Lifecycle</p>
 </li>
 <li>
 <p>Garbage Collection</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Using Browser DevTools</strong></p>
 </li>
 </ul>
 </div>
 </li>
-<li>
-<p><strong>Using Browser DevTools</strong></p>
-<div class="ulist">
-<ul>
 <li>
 <p>Debugging Issues</p>
 </li>
