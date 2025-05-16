@@ -802,6 +802,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </li>
 <li>
+<p>Array</p>
+<div class="ulist">
+<ul>
+<li>
+<p>JavaScript arrays are written with square brackets.</p>
+</li>
+<li>
+<p>Array items are seperated by commas</p>
+</li>
+<li>
+<p>Using an array literal is the easiest way to create a JS Array ( const arr = [item1, item2&#8230;&#8203;])</p>
+</li>
+<li>
+<p>Access array element by referring to the index number</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
 <p>Object</p>
 <div class="ulist">
 <ul>
@@ -922,6 +941,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </li>
+<li>
+<p>typeof operator</p>
+<div class="ulist">
+<ul>
+<li>
+<p>You can use the JS <code>typeof</code> operator to find the type of a JS variable</p>
+</li>
+<li>
+<p>The <code>typeof</code> operator returns the type of a variable or an expression</p>
+</li>
+</ul>
+</div>
+</li>
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -975,58 +1007,198 @@ new Car()</p></td>
 <div class="ulist">
 <ul>
 <li>
-<p>typeof operator</p>
-<div class="ulist">
-<ul>
-<li>
-<p>You can use the JS <code>typeof</code> operator to find the type of a JS variable</p>
-</li>
-<li>
-<p>The <code>typeof</code> operator returns the type of a variable or an expression</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Array</p>
-<div class="ulist">
-<ul>
-<li>
-<p>JavaScript arrays are written with square brackets.</p>
-</li>
-<li>
-<p>Array items are seperated by commas</p>
-</li>
-<li>
-<p>Using an array literal is the easiest way to create a JS Array ( const arr = [item1, item2&#8230;&#8203;])</p>
-</li>
-<li>
-<p>Access array element by referring to the index number</p>
-<div class="ulist">
-<ul>
-<li>
 <p><strong>Type Casting</strong></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Type casting in JS is the conversion of one data type into another data type. It&#8217;s also known as type conversion.</p>
 </li>
 <li>
 <p>Type Conversion vs Coercion</p>
 </li>
-<li>
-<p>Implicit Type Casting</p>
+</ul>
+</div>
 </li>
-<li>
-<p>Explicit Type Casting</p>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Term</th>
+<th class="tableblock halign-left valign-top">What happens</th>
+<th class="tableblock halign-left valign-top">Who triggers it?</th>
+<th class="tableblock halign-left valign-top">Typical syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conversion (casting)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A value is explicitly converted to a different type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">You (the code you write)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number('42'), String(122), Boolean(value), BigInt('23842572758275')</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Coercion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A vakue is converted implicity because the engine needs a different type to finish the operaion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JS runtime ( spec algoriths like ToString, ToNumber)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5 + '3' //'53'<br>
+'3' + '2' // 6<br></p></td>
+</tr>
+</tbody>
+</table>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Data Structure</strong></p>
+<p>Implicit Type Casting</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Implicit type casting in JS, also known as type coercion, is the process where the JS engine automatically convertzs one data type to another when operating on values of different types.</p>
+</li>
+<li>
+<p>This happens without the programmer explicitly requesting a conversion</p>
+</li>
+<li>
+<p>Case 1 - String + number:</p>
 </li>
 </ul>
 </div>
 </li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>let result = '5' + 2;
+console.log(result); // '52' (number 2 is coerced into a string)</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Case 2 - Number + boolean:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>let result = 5 + true;
+console.log(result); // 6 (true is coerced into 1)</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Case 3 - Equality comparison (==):</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>console.log('5' == 5); // true</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Case 4 - Boolean context:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>if ('hello') {
+console.log('This runs'); // 'hello' is truthy
+}</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Implicit casting is automatic and can sometimes lead to unexpected results.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Explicit Type Casting</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Explicit type casting in JS (also known as type conversion) is when you manually convert a value from one data type to another using built-in functions or constructors. This gives you full controll over the conversion unlike the implicit type casting.</p>
+</li>
+<li>
+<p>Common methods of Explicit Type Casting</p>
+</li>
+<li>
+<p>Using explicit casting:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Makes code clearer and more predictable</p>
+</li>
+<li>
+<p>Helps avoid bugs</p>
+</li>
+<li>
+<p>Is essential in strict comparisons or data sanitization</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>To Number:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Number('123');          // 123 (string to number)
+parseInt('123.45');     // 123
+parseFloat('123.45');   // 123.45
++'123';                 // 123 (unary plus operator)</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To String:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>String(123);            // '123'
+(123).toString();       // '123'
+true.toString();        // 'true'</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To Boolean:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Boolean(1);             // true
+Boolean(0);             // false
+Boolean('hello');       // true
+Boolean('');            // false</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Data Structure</strong></p>
+<div class="ulist">
+<ul>
 <li>
 <p>Keyed Collections</p>
 <div class="ulist">
@@ -1048,20 +1220,17 @@ new Car()</p></td>
 </li>
 <li>
 <p>Structured Data</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p>JSON</p>
 </li>
 <li>
 <p>XML</p>
-<div class="ulist">
-<ul>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p>Indexed Collections</p>
 <div class="ulist">
@@ -1071,17 +1240,17 @@ new Car()</p></td>
 </li>
 <li>
 <p>Arrays</p>
-<div class="ulist">
-<ul>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p><strong>Equality Comparisons</strong></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p>Value Comparison Operators</p>
 <div class="ulist">
@@ -1113,17 +1282,17 @@ new Car()</p></td>
 </li>
 <li>
 <p>SameValue</p>
-<div class="ulist">
-<ul>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p><strong>Loops and Iterations</strong></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p>for</p>
 </li>
@@ -1141,14 +1310,14 @@ new Car()</p></td>
 </li>
 <li>
 <p>while</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Control Flow</strong></p>
 </li>
 </ul>
 </div>
 </li>
+<li>
+<p><strong>Control Flow</strong></p>
+<div class="ulist">
+<ul>
 <li>
 <p>Conditional Statements</p>
 <div class="ulist">
@@ -1174,17 +1343,17 @@ new Car()</p></td>
 </li>
 <li>
 <p>Error Objects</p>
-<div class="ulist">
-<ul>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p><strong>Expressions &amp; Operators</strong></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p>Conditional Operators</p>
 </li>
@@ -1202,14 +1371,14 @@ new Car()</p></td>
 </li>
 <li>
 <p>String Operators</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Functions</strong></p>
 </li>
 </ul>
 </div>
 </li>
+<li>
+<p><strong>Functions</strong></p>
+<div class="ulist">
+<ul>
 <li>
 <p>Function Parameters</p>
 <div class="ulist">
@@ -1247,8 +1416,13 @@ new Car()</p></td>
 </li>
 <li>
 <p>Closures</p>
-<div class="ulist">
-<ul>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p><strong>DOM APIs</strong></p>
 </li>
@@ -1257,13 +1431,8 @@ new Car()</p></td>
 </li>
 <li>
 <p><strong>Using (this) keyword</strong></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p>In a method</p>
 </li>
@@ -1294,17 +1463,17 @@ new Car()</p></td>
 </li>
 <li>
 <p>bind</p>
-<div class="ulist">
-<ul>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p><strong>Asynchronous JS</strong></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p>Event Loop</p>
 </li>
@@ -1330,59 +1499,59 @@ new Car()</p></td>
 <ul>
 <li>
 <p>async/await</p>
-<div class="ulist">
-<ul>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p><strong>Working with APIs</strong></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p>XMLHTTPRequest</p>
 </li>
 <li>
 <p>Fetch</p>
-<div class="ulist">
-<ul>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p><strong>Classes</strong></p>
 </li>
 <li>
 <p><strong>Module in JS</strong></p>
-</li>
-</ul>
-</div>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p>CommonJS</p>
 </li>
 <li>
 <p>ESM</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Memory Management</strong></p>
 </li>
 </ul>
 </div>
 </li>
+<li>
+<p><strong>Memory Management</strong></p>
+<div class="ulist">
+<ul>
 <li>
 <p>Memmory Lifecycle</p>
 </li>
 <li>
 <p>Garbage Collection</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Using Browser DevTools</strong></p>
 </li>
 </ul>
 </div>
 </li>
+<li>
+<p><strong>Using Browser DevTools</strong></p>
+<div class="ulist">
+<ul>
 <li>
 <p>Debugging Issues</p>
 </li>

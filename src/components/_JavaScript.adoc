@@ -83,7 +83,11 @@
 
             *** Symbol
                 **** Symbol is a built-in object whose constrcutor returns a symbol primitive - also calles a Symbol value or just a Symbol - that's guaranteed to be unique. 
-
+        ** Array
+            *** JavaScript arrays are written with square brackets. 
+            *** Array items are seperated by commas
+            *** Using an array literal is the easiest way to create a JS Array ( const arr = [item1, item2...])
+            *** Access array element by referring to the index number
         ** Object
             *** JS  objects are written with curly braces. 
             *** Object properties are written as name:value paors, seperated by commas.
@@ -140,6 +144,10 @@
                 **** Prototypal Inheritance
                     ***** In JS, objects inherit directly from other objects. Every ordinary object carries a hidden [[Prototype]] slot that points to another object (or null). When you need a property, the engine walks that prototype chain until it finds the key or runs out of links
 
+                **** typeof operator
+                    ***** You can use the JS `typeof` operator to find the type of a JS variable
+                    ***** The `typeof` operator returns the type of a variable or an expression
+
 [cols="3"]
 |===
 | Pattern | How it sets [[Prototype]] | Code snippet
@@ -170,112 +178,191 @@ new Car()
 | Official mutable API
 | Object.setPrototypeOf(dog, animal);
 
+|===
+
+             
+    
+
+* *Type Casting*
+    ** Type casting in JS is the conversion of one data type into another data type. It's also known as type conversion.
+    ** Type Conversion vs Coercion
+
+[cols="4"]
+|===
+| Term | What happens | Who triggers it? | Typical syntax
+
+| Conversion (casting)
+| A value is explicitly converted to a different type
+| You (the code you write)
+| Number('42'), String(122), Boolean(value), BigInt('23842572758275')
+
+| Coercion
+| A vakue is converted implicity because the engine needs a different type to finish the operaion
+| JS runtime ( spec algoriths like ToString, ToNumber)
+| 5 + '3' //'53' +
+'3' + '2' // 6 +
 
 |===
 
-                **** typeof operator
-                    ***** You can use the JS `typeof` operator to find the type of a JS variable
-                    ***** The `typeof` operator returns the type of a variable or an expression
-
-        ** Array
-            *** JavaScript arrays are written with square brackets. 
-            *** Array items are seperated by commas
-            *** Using an array literal is the easiest way to create a JS Array ( const arr = [item1, item2...])
-            *** Access array element by referring to the index number
-
-    * *Type Casting*
-        ** Type Conversion vs Coercion
         ** Implicit Type Casting
+            *** Implicit type casting in JS, also known as type coercion, is the process where the JS engine automatically convertzs one data type to another when operating on values of different types.
+            *** This happens without the programmer explicitly requesting a conversion
+                        
+            *** Case 1 - String + number:
+[source,js]
+----
+let result = '5' + 2;
+console.log(result); // '52' (number 2 is coerced into a string)
+----
+
+*** Case 2 - Number + boolean:
+[source,js]
+----
+let result = 5 + true;
+console.log(result); // 6 (true is coerced into 1)
+----
+
+*** Case 3 - Equality comparison (==):
+[source,js]
+----
+console.log('5' == 5); // true
+----
+
+*** Case 4 - Boolean context:
+[source,js]
+----
+if ('hello') {
+console.log('This runs'); // 'hello' is truthy
+}
+----
+
+            *** Implicit casting is automatic and can sometimes lead to unexpected results.
+
         ** Explicit Type Casting
-    * *Data Structure*
-        ** Keyed Collections
-            *** Map
-            *** Yak Map
-            *** Set
-            *** Yak Set
-        ** Structured Data
-            **** JSON
-            **** XML
-        ** Indexed Collections
-            *** Typed Arrays
-            *** Arrays
-    * *Equality Comparisons*
-        ** Value Comparison Operators
-            *** ==
-            *** ===
-            *** Object.is
-        ** Equality Algorithms
-            *** isLooselyEqual
-            *** isStrictlyEqual
-            *** SameValueZero
-            *** SameValue
-    * *Loops and Iterations*
-        ** for
-        ** break/continue
-        ** do...while
-        ** for...of loop
-        ** for...in loop
-        ** while
-    * *Control Flow*
-        ** Conditional Statements
-            *** if...else
-            *** switch...case
-        ** Exceptional Handling
-            *** throw statement
-            *** try/catch/finally
-            *** Error Objects
-    * *Expressions & Operators*
-        ** Conditional Operators
-        ** Arithmetic Operators
-        ** Bitwise Operators
-        ** Logical Operators
-        ** BigInt Operators
-        ** String Operators
-    * *Functions*
-        ** Function Parameters
-            *** Default Params
-            *** Rest
-        ** Arrow Functions
-        ** Built-in Functions
-        ** IIFEs
-        ** Arguments object
-        ** Scopr & Function Stack
-            *** Recursion
-            *** Lexical Scoping
-            *** Closures
-    * *DOM APIs*
-    * *Strict Mode*
-    * *Using (this) keyword*
-        ** In a method
-        ** In a function
-        ** Using it alone
-        ** In event handlers
-        ** In arrow functions
-        ** Function borrowing
-        ** Explicit binding
-            *** call
-            *** apply
-            *** bind
-    * *Asynchronous JS*
-        ** Event Loop
-        ** setTimeout
-        ** SetInterval
-        ** Callbacks
-            *** Callback Hell
-        ** Promise
-            *** async/await
-    * *Working with APIs*
-        ** XMLHTTPRequest
-        ** Fetch
-    * *Classes*
-    * *Module in JS*
-        ** CommonJS
-        ** ESM
-    * *Memory Management*
-        ** Memmory Lifecycle
-        ** Garbage Collection
-    * *Using Browser DevTools*
-        ** Debugging Issues
-        ** Debugging Memory Leaks
-        ** Debugging Performance
-        
+            *** Explicit type casting in JS (also known as type conversion) is when you manually convert a value from one data type to another using built-in functions or constructors. This gives you full controll over the conversion unlike the implicit type casting.
+            *** Common methods of Explicit Type Casting
+            *** Using explicit casting:
+            - Makes code clearer and more predictable
+            - Helps avoid bugs
+            - Is essential in strict comparisons or data sanitization
+
+
+*** To Number:
+[source,js]
+----
+Number('123');          // 123 (string to number)
+parseInt('123.45');     // 123
+parseFloat('123.45');   // 123.45
++'123';                 // 123 (unary plus operator)
+----
+
+*** To String:
+[source,js]
+----
+String(123);            // '123'
+(123).toString();       // '123'
+true.toString();        // 'true'
+----
+
+*** To Boolean:
+[source,js]
+----
+Boolean(1);             // true
+Boolean(0);             // false
+Boolean('hello');       // true
+Boolean('');            // false
+----
+
+
+* *Data Structure*
+    ** Keyed Collections
+        *** Map
+        *** Yak Map
+        *** Set
+        *** Yak Set
+    ** Structured Data
+        **** JSON
+        **** XML
+    ** Indexed Collections
+        *** Typed Arrays
+        *** Arrays
+* *Equality Comparisons*
+    ** Value Comparison Operators
+        *** ==
+        *** ===
+        *** Object.is
+    ** Equality Algorithms
+        *** isLooselyEqual
+        *** isStrictlyEqual
+        *** SameValueZero
+        *** SameValue
+* *Loops and Iterations*
+    ** for
+    ** break/continue
+    ** do...while
+    ** for...of loop
+    ** for...in loop
+    ** while
+* *Control Flow*
+    ** Conditional Statements
+        *** if...else
+        *** switch...case
+    ** Exceptional Handling
+        *** throw statement
+        *** try/catch/finally
+        *** Error Objects
+* *Expressions & Operators*
+    ** Conditional Operators
+    ** Arithmetic Operators
+    ** Bitwise Operators
+    ** Logical Operators
+    ** BigInt Operators
+    ** String Operators
+* *Functions*
+    ** Function Parameters
+        *** Default Params
+        *** Rest
+    ** Arrow Functions
+    ** Built-in Functions
+    ** IIFEs
+    ** Arguments object
+    ** Scopr & Function Stack
+        *** Recursion
+        *** Lexical Scoping
+        *** Closures
+* *DOM APIs*
+* *Strict Mode*
+* *Using (this) keyword*
+    ** In a method
+    ** In a function
+    ** Using it alone
+    ** In event handlers
+    ** In arrow functions
+    ** Function borrowing
+    ** Explicit binding
+        *** call
+        *** apply
+        *** bind
+* *Asynchronous JS*
+    ** Event Loop
+    ** setTimeout
+    ** SetInterval
+    ** Callbacks
+        *** Callback Hell
+    ** Promise
+        *** async/await
+* *Working with APIs*
+    ** XMLHTTPRequest
+    ** Fetch
+* *Classes*
+* *Module in JS*
+    ** CommonJS
+    ** ESM
+* *Memory Management*
+    ** Memmory Lifecycle
+    ** Garbage Collection
+* *Using Browser DevTools*
+    ** Debugging Issues
+    ** Debugging Memory Leaks
+    ** Debugging Performance
+    
