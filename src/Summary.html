@@ -1393,36 +1393,147 @@ console.log(tArr[0]); // 255</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Value Comparison Operators</p>
+<p>Value Comparison Operators<br>
+There are different ways to check if two values are equal, each with specific rules</p>
 <div class="ulist">
 <ul>
 <li>
-<p>==</p>
+<p>== (Loose Equality)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Compares values after type conversions</p>
 </li>
 <li>
-<p>===</p>
+<p>Can lead to unexpected result</p>
 </li>
 <li>
-<p>Object.is</p>
+<p>` 0 == "0" // true<br>
+false == 0; // true<br>
+null == undefine; //true`</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Equality Algorithms</p>
+<p>=== (Strict Equality)</p>
 <div class="ulist">
 <ul>
 <li>
-<p>isLooselyEqual</p>
+<p>Compares values without type conversion</p>
 </li>
 <li>
-<p>isStrictlyEqual</p>
+<p>Types must match to return <code>true</code></p>
 </li>
 <li>
-<p>SameValueZero</p>
+<p><code>0 ="0"; // false<br>
+false === 0; //false</code></p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p>SameValue</p>
+<p>Object.is</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Like <code>===</code> but:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>NaN === NaN</code> // false, but <code>Object.is(NaN, NaN)</code> //true</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>+0 === -0</code> // true, but <code>Object.is(+0,-0)</code> //false</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Equality Algorithms<br>
+These are how JS internally performs comparisons. You don&#8217;t use them directly, but they define how operator behave.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>isLooselyEqual</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Used by <code>==</code></p>
+</li>
+<li>
+<p>Converts your types before comparing</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>isStrictlyEqual</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Used by <code>===</code></p>
+</li>
+<li>
+<p>No type conversion; strict match</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>SameValueZero</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Used in <code>Array.prototype.includes</code>, <code>Set</code>, <code>Map</code></p>
+</li>
+<li>
+<p>Like <code>===</code>, but:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>NaN === NaN</code> // true</p>
+</li>
+<li>
+<p><code>+0 === -0</code> // true</p>
+</li>
+<li>
+<p><code>[NaN].includes(NaN); // true thanks to SameValueZero</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>SameValue</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Used by <code>Object.is();</code></p>
+</li>
+<li>
+<p>Like <code>===</code>, but:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>NaN === NaN</code> // true</p>
+</li>
+<li>
+<p><code>+0 !== ´0</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>

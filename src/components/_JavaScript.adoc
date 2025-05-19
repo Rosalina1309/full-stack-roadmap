@@ -341,17 +341,53 @@ Boolean('');            // false
             **** Type: `Uint8Array`, `Float32Array`, etc.
             **** `let tArr= new Uint8Array([255,128,0]); +
             console.log(tArr[0]); // 255`
-            
+
 * *Equality Comparisons*
-    ** Value Comparison Operators
-        *** ==
-        *** ===
+    ** Value Comparison Operators +
+    There are different ways to check if two values are equal, each with specific rules
+
+        *** == (Loose Equality)
+            **** Compares values after type conversions
+            **** Can lead to unexpected result
+            **** ` 0 == "0" // true +
+            false == 0; // true +
+            null == undefine; //true`
+
+        *** === (Strict Equality)
+            **** Compares values without type conversion
+            **** Types must match to return `true`
+            **** `0 ="0"; // false +
+            false === 0; //false`
+
         *** Object.is
-    ** Equality Algorithms
-        *** isLooselyEqual
-        *** isStrictlyEqual
-        *** SameValueZero
-        *** SameValue
+            **** Like `===` but:
+                ***** `NaN === NaN` // false, but `Object.is(NaN, NaN)` //true
+                **** `+0 === -0` // true, but `Object.is(+0,-0)` //false
+
+    ** Equality Algorithms +
+    These are how JS internally performs comparisons. You don't use them directly, but they define how operator behave.
+
+        *** `isLooselyEqual`
+            **** Used by `==`
+            **** Converts your types before comparing
+
+        *** `isStrictlyEqual`
+            **** Used by `===`
+            **** No type conversion; strict match
+
+        *** `SameValueZero`
+            **** Used in `Array.prototype.includes`, `Set`, `Map`
+            **** Like `===`, but:
+                ***** `NaN === NaN` // true
+                ***** `+0 === -0` // true
+                ***** `[NaN].includes(NaN); // true thanks to SameValueZero`
+
+        *** `SameValue`
+            **** Used by `Object.is();`
+            **** Like `===`, but:
+                ***** `NaN === NaN` // true
+                ***** `+0 !== ´0`
+                
 * *Loops and Iterations*
     ** for
     ** break/continue
