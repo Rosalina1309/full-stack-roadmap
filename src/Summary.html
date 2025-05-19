@@ -1200,33 +1200,143 @@ Boolean('');            // false</pre>
 <div class="ulist">
 <ul>
 <li>
-<p>Keyed Collections</p>
+<p>A data structure is a way of organizing and storing data so it can be used efficiently. In JS, data structures help youstore values ( primitive or complex), group data, and build logic for applications like storing user records, handling network data, and building features like undo, queues, etc.</p>
+</li>
+<li>
+<p>Keyed Collections<br>
+Used when you need to associate values with unique keys</p>
 <div class="ulist">
 <ul>
 <li>
 <p>Map</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A collection of key-value pairs</p>
 </li>
 <li>
-<p>Yak Map</p>
+<p>Keys can be any type, not just strings</p>
 </li>
 <li>
-<p>Set</p>
-</li>
-<li>
-<p>Yak Set</p>
+<p>Maintains insertion order</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Structured Data</p>
+<p><code>let map = new Map();<br>
+map.set('name', 'Alice');<br>
+map.set(1, 'one');<br>
+console.log(map(get(1))); // "one"</code></p>
+</li>
+<li>
+<p>Weak Map</p>
 <div class="ulist">
 <ul>
 <li>
-<p>JSON</p>
+<p>Similar to Map but</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Keys must be objects</p>
 </li>
 <li>
-<p>XML</p>
+<p>Keys are held weakly - they do not prevent garbage collection</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Userful for associating data with DOM elements or other objects without memory leaks</p>
+</li>
+<li>
+<p><code>let obj = {};<br>
+let wm = new WeakMap();<br>
+wm.set(obj, 'secret');<br>
+console.log(wm.get(obj)); // 'secret</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Set</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A collection of unique values</p>
+</li>
+<li>
+<p>No duplicate entries allowed</p>
+</li>
+<li>
+<p><code>let set = new Set([1,2,3,3]);<br>
+console.log(set); // Set {1,2,3}</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Weak Set</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Like Set, but only stores objects.</p>
+</li>
+<li>
+<p>Objects are held weakly, meaning they can be garbage-colected if there are no other references.</p>
+</li>
+<li>
+<p><code>let obj = {};<br>
+let ws = new WeakSet();<br>
+ws.add(obj);<br>
+console.log(ws.has(obj)); // true</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Structured Data<br>
+Used to store complex or nested data, often for exchange or serialization.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>JSON (JavaScript Object Notation)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A lightweight, text-based format for storing and exchanging structured data</p>
+</li>
+<li>
+<p>Common in APIs and configuration files</p>
+</li>
+<li>
+<p><code>let jsonString = '{"name": "Bob", "age": 25}';<br>
+let obj = JSON.parse(jsonString);<br>
+console.log(obj.name); // 'Bob'</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>XML (eXtensible Markup Language)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A markup language for representing structured data, especially in older systems or certain APIs</p>
+</li>
+<li>
+<p>Not native to JavaScript, but can be parsed using DOMParser or XML libraries.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>let parser= new DOMParser();<br>
+let xmlDoc = parser.parseFromString('&lt;user&gt;&lt;name&gt;Alice&lt;/name&gt;&lt;/user&gt;', 'text/xml');<br>
+console.log(xmlDoc.getElementByTagName('name')[0].textContent); // 'Alice'</code></p>
 </li>
 </ul>
 </div>
@@ -1236,10 +1346,41 @@ Boolean('');            // false</pre>
 <div class="ulist">
 <ul>
 <li>
-<p>Typed Arrays</p>
+<p>Arrays</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Can store any type (numbers, strings, objects)</p>
 </li>
 <li>
-<p>Arrays</p>
+<p>Can grow or shrink</p>
+</li>
+<li>
+<p><code>let arr=[1,"hi", true];<br>
+console..log(arr[1]); //"hi"</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Typed Arrays</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Fixed-type, fixed-size arrays for binary data</p>
+</li>
+<li>
+<p>Used in performance-critical tasks</p>
+</li>
+<li>
+<p>Type: <code>Uint8Array</code>, <code>Float32Array</code>, etc.</p>
+</li>
+<li>
+<p><code>let tArr= new Uint8Array([255,128,0]);<br>
+console.log(tArr[0]); // 255</code></p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>

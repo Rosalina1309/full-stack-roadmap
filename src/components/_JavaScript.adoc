@@ -275,17 +275,73 @@ Boolean('');            // false
 
 
 * *Data Structure*
-    ** Keyed Collections
+    ** A data structure is a way of organizing and storing data so it can be used efficiently. In JS, data structures help youstore values ( primitive or complex), group data, and build logic for applications like storing user records, handling network data, and building features like undo, queues, etc.
+
+    ** Keyed Collections +
+    Used when you need to associate values with unique keys
+
         *** Map
-        *** Yak Map
+            **** A collection of key-value pairs
+            **** Keys can be any type, not just strings
+            **** Maintains insertion order
+            *** `let map = new Map(); +
+            map.set('name', 'Alice'); +
+            map.set(1, 'one'); +
+            console.log(map(get(1))); // "one"`
+
+        *** Weak Map
+            **** Similar to Map but 
+                ***** Keys must be objects
+                ***** Keys are held weakly - they do not prevent garbage collection
+            **** Userful for associating data with DOM elements or other objects without memory leaks
+            **** `let obj = {}; +
+            let wm = new WeakMap(); +
+            wm.set(obj, 'secret'); +
+            console.log(wm.get(obj)); // 'secret`
+
         *** Set
-        *** Yak Set
-    ** Structured Data
-        **** JSON
-        **** XML
+            **** A collection of unique values
+            **** No duplicate entries allowed
+            **** `let set = new Set([1,2,3,3]); +
+            console.log(set); // Set {1,2,3}`
+
+        *** Weak Set
+            **** Like Set, but only stores objects.
+            **** Objects are held weakly, meaning they can be garbage-colected if there are no other references.
+            **** `let obj = {}; +
+            let ws = new WeakSet(); +
+            ws.add(obj); +
+            console.log(ws.has(obj)); // true`
+
+    ** Structured Data +
+     Used to store complex or nested data, often for exchange or serialization.
+        **** JSON (JavaScript Object Notation)
+            ***** A lightweight, text-based format for storing and exchanging structured data
+            ***** Common in APIs and configuration files
+            ***** `let jsonString = '{"name": "Bob", "age": 25}'; +
+            let obj = JSON.parse(jsonString); +
+            console.log(obj.name); // 'Bob'`
+
+        **** XML (eXtensible Markup Language)
+            ***** A markup language for representing structured data, especially in older systems or certain APIs
+            ***** Not native to JavaScript, but can be parsed using DOMParser or XML libraries.
+            **** `let parser= new DOMParser(); +
+            let xmlDoc = parser.parseFromString('<user><name>Alice</name></user>', 'text/xml'); +
+            console.log(xmlDoc.getElementByTagName('name')[0].textContent); // 'Alice'`
     ** Indexed Collections
-        *** Typed Arrays
         *** Arrays
+            **** Can store any type (numbers, strings, objects)
+            **** Can grow or shrink 
+            **** `let arr=[1,"hi", true]; +
+            console..log(arr[1]); //"hi"`
+
+        *** Typed Arrays
+            **** Fixed-type, fixed-size arrays for binary data
+            **** Used in performance-critical tasks
+            **** Type: `Uint8Array`, `Float32Array`, etc.
+            **** `let tArr= new Uint8Array([255,128,0]); +
+            console.log(tArr[0]); // 255`
+            
 * *Equality Comparisons*
     ** Value Comparison Operators
         *** ==
