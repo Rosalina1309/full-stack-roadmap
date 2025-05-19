@@ -387,14 +387,23 @@ Boolean('');            // false
             **** Like `===`, but:
                 ***** `NaN === NaN` // true
                 ***** `+0 !== ´0`
-                
+
 * *Loops and Iterations*
     ** for
+        *** A classic loop with control over start, end and step.
     ** break/continue
+        *** Control loop execution
     ** do...while
+        *** Runs at least once, then repeats while condition is true.
+            **** `break`: exists the loop completely
+            **** `continue`: skips the current iteration and moves to the next
     ** for...of loop
+        *** Used to loop over iterable values (like array, strings)
     ** for...in loop
+        *** Used to loop over object keys (property names)
     ** while
+        *** Runs while a condition is true
+        
 * *Control Flow*
     ** Conditional Statements
         *** if...else
